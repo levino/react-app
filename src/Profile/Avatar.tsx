@@ -12,6 +12,7 @@ export const Avatar: React.FC = () => {
   if (isError) {
     return <span>Error: {error.message}</span>
   }
+
   return (
     <div className="max-h-24">
       <FlowbiteAvatar img={data.avatarUrl} />
