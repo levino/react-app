@@ -1,6 +1,4 @@
 import React from "react"
-
-import { Avatar as FlowbiteAvatar } from "flowbite-react"
 import { useProfileQuery } from "../hooks"
 
 export const Avatar: React.FC = () => {
@@ -13,9 +11,5 @@ export const Avatar: React.FC = () => {
     return <span>Error: {error.message}</span>
   }
 
-  return (
-    <div className="max-h-24">
-      <FlowbiteAvatar img={data.avatarUrl} />
-    </div>
-  )
+  return <img src={data.avatarUrl} className="w-32 rounded-full" />
 }
